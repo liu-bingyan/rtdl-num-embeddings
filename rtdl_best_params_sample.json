@@ -1,0 +1,111 @@
+{
+    "parameters": {
+        "gesture": {
+            "mlp": {
+                "d_layers": [
+                    672,
+                    904,
+                    904,
+                    636
+                ],
+                "dropout": 0.0,
+                "num_bins": {
+                    "-lr": 114,
+                    "-t-lr": 76,
+                    "-lrlr": 114,
+                    "-t-lrlr": 121
+                },
+                "learning_rate": 0.0017928987864287548
+            },
+            "mlp-lr": {
+                "d_layers": [
+                    937,
+                    776,
+                    776,
+                    453
+                ],
+                "dropout": 0.0,
+                "num_bins": 114,
+                "learning_rate": 0.0006528689396142999
+            },
+            "mlp-t": {
+                "d_layers": [
+                    892,
+                    581,
+                    302
+                ],
+                "dropout": 0.39215021090249064,
+                "num_bins": null,
+                "learning_rate": 0.00013385148494449647
+            },
+            "mlp-t-lr": {
+                "d_layers": [
+                    920,
+                    384,
+                    908
+                ],
+                "dropout": 0.0,
+                "num_bins": 76,
+                "learning_rate": 0.0009644187419365857
+            },
+            "mlp-lrlr": {
+                "d_layers": [
+                    902,
+                    931
+                ],
+                "dropout": 0.19654620721718313,
+                "num_bins": 114,
+                "learning_rate": 0.0009180045139579777
+            },
+            "mlp-t-lrlr": {
+                "d_layers": [
+                    779,
+                    529,
+                    582
+                ],
+                "dropout": 0.12298020079763063,
+                "num_bins": 121,
+                "learning_rate": 0.0021766541693743285
+            },
+            "resnet": {
+                "n_blocks": 5,
+                "d_main": 382,
+                "dropout_first": 0.04292174012409081,
+                "dropout_second": 0.0,
+                "d_hidden": 383,
+                "num_bins": {
+                    "-lr": 12,
+                    "-t-lr": 57
+                },
+                "learning_rate": 0.0002325754992579975
+            },
+            "resnet-lr": {
+                "n_blocks": 8,
+                "d_main": 502,
+                "dropout_first": 0.13850599925654306,
+                "dropout_second": 0.0,
+                "d_hidden": 1703,
+                "num_bins": 12,
+                "learning_rate": 5.5103423659526796e-05
+            },
+            "resnet-t": {
+                "n_blocks": 7,
+                "d_main": 160,
+                "dropout_first": 0.06475063790176672,
+                "dropout_second": 0.009767224317873024,
+                "d_hidden": 600,
+                "num_bins": null,
+                "learning_rate": 0.00236048685096718
+            },
+            "resnet-t-lr": {
+                "n_blocks": 2,
+                "d_main": 309,
+                "dropout_first": 0.01367589022379358,
+                "dropout_second": 0.0,
+                "d_hidden": 957,
+                "num_bins": 57,
+                "learning_rate": 0.000329547098409887
+            }
+        }
+    }
+}
