@@ -8,8 +8,8 @@ def wrap(d,name='parameters'):
         return {name: d}
     
 def retrive_main():
-    models = ["mlp", "resnet"] #, "transformer"]
-    suffix = ["", "-lr", "-t", "-t-lr", "-lrlr", "-t-lrlr"]
+    models = ["mlp", "resnet", "transformer"]
+    suffix = ["-l", "-lr", "-t", "-t-l", "-t-lr", "-lrlr", "-t-lrlr"]
 
     best_params = defaultdict(dict)
     merged_params = defaultdict(dict)
@@ -31,24 +31,10 @@ def retrive_main():
                                 best_params[dataset][model]['num_bins'] = report_data["config"]["model"]["d_num_embedding"]
                                 best_params[dataset][model]['learning_rate'] = report_data["config"]["training"]["lr"]
                     
-                    if suf == "":
-                        merged_params[dataset][basemodel] = best_params[dataset][basemodel]
-                        merged_params[dataset][basemodel]['num_bins'] = {}
-                    elif suf == "-lr" or suf == "-t-lr" or suf == "-lrlr" or suf == "-t-lrlr":
-                        merged_params[dataset][basemodel]['num_bins'][suf] = best_params[dataset][model]['num_bins']
-                    else:
-                        pass
 
-
-    output_file_raw = "rtdl_best_params_raw.json"
-    output_file = "rtdl_best_params.json"
-    output_sample = "rtdl_best_params_sample.json"
+    output_file_raw = "rtdl_best_params_modelwise.json"
     with open(output_file_raw, "w") as f:
         json.dump(wrap(best_params), f, indent=4)
-    with open(output_file, "w") as f:
-        json.dump(wrap(merged_params), f, indent=4)
-    with open(output_sample, "w") as f:
-        json.dump(wrap(wrap(best_params['gesture'],'gesture')), f, indent=4)
 
         
 if __name__ == "__main__":
